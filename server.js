@@ -16,7 +16,7 @@ const Ingredient = require('./models/ingredient');
 ///////////////////////////////
 // CORS
 ////////////////////////////////
-const whitelist = ['http://localhost:3000', 'heroku frontend address'];
+const whitelist = ['http://localhost:3000', 'https://new-cocktail-react.herokuapp.com/'];
 
 const corsOptions = {
     origin: (origin, callback) => {
