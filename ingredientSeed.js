@@ -3,7 +3,8 @@
 ////////////////////////////////
 require('dotenv').config();
 const mongoose = require('mongoose');
-const MONGODB_URL = process.env.MONGODB_URL;
+// const MONGODB_URL = process.env.MONGODB_URL;
+const MONGODB_URL = "mongodb+srv://admin:abc1234@cluster0.k9klx.mongodb.net/new-cocktails?retryWrites=true&w=majority"
 const Ingredient = require('./models/ingredient');
 
 ///////////////////////////////
