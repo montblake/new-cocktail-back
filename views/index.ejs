@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktails</title>
+</head>
+<body>
+    <h1>Cocktails</h1>
+    <div>
+        <h2><%= cocktail.name %></h2>
+        <div className="ingredients">
+            <% for (let i=0; i < cocktail.ingredients.length; i++){ %>
+                <p>
+                    <span><%=cocktail.ingredients[i].amount%></span>
+                    <%if(cocktail.ingredients[i].fraction==="1/4"){%>
+                        <span>&frac14</span>
+                    <%} else if(cocktail.ingredients[i].fraction==="1/2"){%>
+                        <span>&frac12</span>
+                    <%} else if(cocktail.ingredients[i].fraction==="3/4"){%>
+                        <span>&frac34</span>
+                    <%}%> 
+                    <span><%=cocktail.ingredients[i].measurement%></span>
+                    <span><%=cocktail.ingredients[i].ingredient.name%></span>
+                </p>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
